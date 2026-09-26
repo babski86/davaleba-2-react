@@ -1,0 +1,41 @@
+:global(body) {
+  background: #dceff2;
+  margin: 0;
+}
+
+.navbarContainer {
+  align-items: center;
+  background: #172a3a;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+  min-height: 10vh;
+
+  width: 100%;
+}
+
+.navbar {
+  text-align: center;
+  width: min(100%, 28rem);
+}
+
+.navbarLink {
+  color: #f7f3e8;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.navbarLink:hover,
+.navbarLink:focus-visible {
+  color: #f4c95d;
+}
+
+@media (max-width: 520px) {
+  .navbar {
+    width: 100%;
+  }
+}
