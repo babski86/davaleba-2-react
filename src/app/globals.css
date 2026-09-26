@@ -28,18 +28,21 @@ body {
 
 main {
   background: #dceff2;
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   margin: 0 auto;
   max-width: 90rem;
   padding: clamp(1.5rem, 4vw, 4rem);
 }
 
 main > div {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+
+main > div > div {
   background: #ffffff;
   border: 1px solid #c8dfe2;
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1.25rem rgb(23 42 58 / 10%);
   display: flex;
   flex-direction: column;

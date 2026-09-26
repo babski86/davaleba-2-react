@@ -50,15 +50,17 @@ export default function Home() {
         <Navbar />
       </header>
       <main>
-        {products.map((product) => (
-          <div key={product.id}>
-            <p>{product.id}</p>
-            <h2>{product.title}</h2>
-            <img src={product.image} alt={product.title} />
-            <p>{product.price}</p>
-            <p>{product.description}</p>
-          </div>
-        ))}
+        <div>
+          {products.map((product) => (
+            <div key={product.id}>
+              <p>{product.id}</p>
+              <h2>{product.title}</h2>
+              <img src={product.image} alt={product.title} />
+              <p>{product.price}</p>
+              <p>{product.description}</p>
+            </div>
+          ))}
+        </div>
       </main>
     </>
   );
