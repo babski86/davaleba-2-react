@@ -1,0 +1,121 @@
+.errorState {
+  animation: signalPulse 3s ease-in-out infinite;
+  background: linear-gradient(145deg, #101b2b, #09111c 72%);
+  border: 1px solid #1bd9e8;
+  border-left: 0.35rem solid #ff3ca6;
+  border-radius: 0.25rem;
+  box-shadow:
+    0 0 1.5rem rgb(27 217 232 / 16%),
+    0 0 3rem rgb(255 60 166 / 10%),
+    inset 0 0 1.5rem rgb(27 217 232 / 5%);
+  isolation: isolate;
+  margin: clamp(2rem, 8vh, 5rem) auto;
+  max-width: 38rem;
+  overflow: hidden;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  position: relative;
+  text-align: center;
+}
+
+.errorState::before {
+  background: repeating-linear-gradient(to bottom, transparent 0, transparent 3px, rgb(91 224 238 / 5%) 4px);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+}
+
+.errorState > * {
+  position: relative;
+}
+
+.errorState > div {
+  background: rgb(255 60 166 / 10%);
+  border: 1px solid rgb(255 60 166 / 55%);
+  border-radius: 0.2rem;
+  color: #ff72bb;
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.45rem 0.75rem;
+  text-transform: uppercase;
+}
+
+.errorState h3 {
+  color: #65f5ff;
+  font-size: 1.7rem;
+  line-height: 1.4;
+  margin: 1.25rem 0 0.75rem;
+  text-shadow: 0 0 0.65rem rgb(27 217 232 / 45%);
+}
+
+.errorState p {
+  color: #bdcbd8;
+  line-height: 1.6;
+  margin: 0.6rem 0;
+}
+
+.errorState p:nth-of-type(1) {
+  color: #ff72bb;
+}
+
+.errorState p:last-child {
+  background: rgb(27 217 232 / 8%);
+  border: 1px solid rgb(27 217 232 / 45%);
+  border-radius: 0.2rem;
+  color: #8cf8ff;
+  display: inline-block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  padding: 0.75rem 1.1rem;
+  text-shadow: 0 0 0.6rem rgb(27 217 232 / 45%);
+}
+
+.fotoError {
+  align-items: center;
+  background: linear-gradient(145deg, #101b2b, #09111c 72%);
+  display: flex;
+  justify-content: center;
+  min-height: 65vh;
+  padding: clamp(1.25rem, 5vw, 3rem);
+}
+
+.fotoError img {
+  border: 2px solid #1bd9e8;
+  border-radius: 0.35rem;
+  box-shadow:
+    0 0 1.5rem rgb(27 217 232 / 22%),
+    0 0 3rem rgb(255 60 166 / 14%);
+  display: block;
+  height: auto;
+  max-height: 75vh;
+  max-width: 100%;
+  object-fit: contain;
+  width: 25rem;
+}
+
+@keyframes signalPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 1.5rem rgb(27 217 232 / 16%),
+      0 0 3rem rgb(255 60 166 / 10%),
+      inset 0 0 1.5rem rgb(27 217 232 / 5%);
+  }
+
+  50% {
+    box-shadow:
+      0 0 1.8rem rgb(27 217 232 / 24%),
+      0 0 3.3rem rgb(255 60 166 / 15%),
+      inset 0 0 1.8rem rgb(27 217 232 / 8%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .errorState {
+    animation: none;
+  }
+}
